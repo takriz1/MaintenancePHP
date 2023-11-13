@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Page d'accueil</title>
+    <link rel="stylesheet" type="text/css" href="css/demandeur.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <form>
+            <p> Bon de Travail n° <span id="form-number"></span></p>
+            <input type="text" placeholder="Demandeur"><br>
+            <input type="number" placeholder="Matricule"><br>
+            <input type="text" placeholder="Equipement"><br>
+            <input type="date" placeholder="Date d'arrêt"><br>
+            <input type="time" placeholder="Heure d'arrêt"><br>
+            <a href="reclamation.html">
+                <input type="button" value="Informer"><br>
+
+        </form>
+
+        <div class="drop drop-1"></div>
+        <div class="drop drop-2"></div>
+        <div class="drop drop-3"></div>
+        <div class="drop drop-4"></div>
+       
+    </div>
+    <script>
+        // Récupération du dernier numéro de formulaire ou initialisation à 0
+        let formNumber = parseInt(localStorage.getItem('formNumber')) || 0;
+
+        // Incrémentation du numéro de formulaire
+        formNumber++;
+
+        // Enregistrement du nouveau numéro de formulaire dans le stockage local
+        localStorage.setItem('formNumber', formNumber);
+
+        // Mise à jour de l'élément HTML correspondant avec le nouveau numéro de formulaire
+        document.getElementById('form-number').textContent = formNumber.toString();
+    </script>
+    
+</body>
+</body>
+
+</html>

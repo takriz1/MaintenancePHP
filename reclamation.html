@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+
+    
+<head>
+    <meta charset="UTF-8">
+    <title>Custom Website</title>
+    <link rel="stylesheet" type="text/css" href="css/reclamation.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+  
+
+<body>
+    <div class="wrapper">
+        <nav class="navbar">
+            <img class="logo" src="leoni.png">
+            <ul>
+                <li><a class="active" href="index.html">Accueil</a></li>
+                <li><a href="demandeur.html">Espace demandeur</a></li>
+
+                <li><a href="#">Espace Technicien</a></li>
+                
+
+            </ul>
+        </nav>
+        <div class="center">
+            <h1>Votre demande a été envoyée</h1>
+            <h2>Merci de patienter</h2>
+            <div class="buttons">
+            <a href="http://127.0.0.1:3000/4.html" target="_blank">
+
+                <button id="timer-button">Start Timer</button>
+                    <div id="timer"></div>
+                </div>
+
+
+                </div>
+        </div>
+        
+        <script>
+            const timerButton = document.getElementById('timer-button');
+const timerDiv = document.getElementById('timer');
+let seconds = 0;
+let intervalId;
+
+function startTimer() {
+  intervalId = setInterval(() => {
+    seconds++;
+    timerDiv.innerHTML = seconds + ' seconds';
+  }, 1000);
+}
+
+timerButton.addEventListener('click', startTimer);
+            </script>
+            
+            </body>
+            </html>
